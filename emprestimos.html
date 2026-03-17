@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#"><i class="fa-solid fa-scroll" style="color: rgb(0, 0, 0);"></i> Empréstimos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 0, 0);"></i> Alunos</a>
+                    <a class="nav-link" href="alunos.html"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 0, 0);"></i> Alunos</a>
                 </li>
             </ul>
         </div>
@@ -40,7 +40,7 @@
             <main class="col-md-12 mt-5 mb-4">
                 <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
                     <h2 class="titulo-pesquisa font-weight-bold">Empréstimos</h2>
-                    <p class="mb-4 text-center">Procure por nome do aluno, título do livro, data de empréstimo ou data de devolução</p>
+                    <p class="mb-4 text-center">Procure por nome do aluno, título do livro, data de empréstimo ou data de devolução:</p>
                     <input type="text" class="form-control" id="pesquisa" placeholder="Pesquise...">
                 </section>
                 <section class="col-md-12 my-4 text-center">
@@ -73,8 +73,9 @@
                         </div>
                         <div class="col-md-6">
                             <h5>O Hobbit</h5>
-                            <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54</small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-25 bg-danger text-light rounded">Atrasado</p></div>
+                            <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54<br></small>
+                            <small class="text-muted">Emprestado a <a href="#">Gustavo Henrique Tamanini de Souza</a></small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Atrasado há 14 dias</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
                             <button type="submit" class="mx-3 btn btn-success mt-2 mb-2 disabled" data-toggle="modal" data-target="#renovar-livro">Renovar Livro</button>
@@ -123,11 +124,12 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Ortodoxia</h5>
-                            <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15</small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-25 bg-warning text-dark rounded">Emprestado</p></div>
+                            <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15<br></small>
+                            <small class="text-muted">Emprestado a <a href="#">Gustavo Lidievich</a></small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-warning text-dark rounded">Emprestado até dia 21/03</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="submit" class="mx-3 btn btn-success mt-2 mb-2" data-toggle="modal" data-target="#renovar-livro">Renovar Livro</button>
+                            <button type="submit" class="mx-3 btn btn-success mt-2" data-toggle="modal" data-target="#renovar-livro">Renovar Livro</button>
                             <div class="modal fade" id="renovar-livro" tabindex="-1" aria-labelledby="label-renovar-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -146,7 +148,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#devolver-livro">Devolver Livro</button>
+                            <button type="submit" class="mx-3 btn btn-danger mb-2" data-toggle="modal" data-target="#devolver-livro">Devolver Livro</button>
                             <div class="modal fade" id="devolver-livro" tabindex="-1" aria-labelledby="label-devolver-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
