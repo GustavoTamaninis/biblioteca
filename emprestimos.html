@@ -35,7 +35,34 @@
         <div class="row">
             <header class="col-md-12 text-right d-flex flex-row justify-content-end shadow-sm">
                 <a href="#" class="py-3 px-2"><i class="icone fa-regular fa-moon mt-2 mr-2" style="color: rgb(0, 0, 0);"></i></a>
-                <a href="#" class="py-3 px-2"><i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i></a>
+                <span class="dropleft d-flex align-items-center">
+                    <a href="#" class="dropdown-toggle py-3 px-2" data-toggle="dropdown" aria-expanded="false"><i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i></a>
+                    <div class="dropdown-menu p-2">
+                        <div class="row">
+                            <div class="col-md-3 offset-1 d-flex justify-content-center align-items-center">
+                                <i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i>
+                            </div>
+                            <div class="col-md-8 d-flex flex-column justify-content-center p-0">
+                                <p class="mb-0">Admin</p>
+                                <small class="text-muted">GustavoTama</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dropdown-divider"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#" class="dropdown-item">Meu perfil</a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#" class="dropdown-item">Histórico de empréstimos</a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#" class="dropdown-item">Configurações</a>
+                            </div>
+                        </div>
+                    </div>
+                </span>
             </header>
             <main class="col-md-12 mt-5 mb-4">
                 <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
@@ -74,12 +101,12 @@
                         <div class="col-md-6">
                             <h5>O Hobbit</h5>
                             <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54<br></small>
-                            <small class="text-muted">Emprestado a <a href="#">Gustavo Henrique Tamanini de Souza</a></small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Atrasado há 14 dias</p></div>
+                            <small class="text-muted">Emprestado a <a href="#">Gustavo Tamanini</a></small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Atrasado há 2 dias</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="submit" class="mx-3 btn btn-success mt-2 mb-2 disabled" data-toggle="modal" data-target="#renovar-livro">Renovar Livro</button>
-                            <div class="modal fade" id="renovar-livro" tabindex="-1" aria-labelledby="label-renovar-livro" aria-hidden="true">
+                            <button type="submit" class="mx-3 btn btn-success disabled" data-toggle="modal" data-target="#renovar-livro1">Renovar Livro</button>
+                            <div class="modal fade" id="renovar-livro1" tabindex="-1" aria-labelledby="label-renovar-livro1" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -97,8 +124,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#devolver-livro">Devolver Livro</button>
-                            <div class="modal fade" id="devolver-livro" tabindex="-1" aria-labelledby="label-devolver-livro" aria-hidden="true">
+                            <button type="submit" class="mx-3 btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#devolver-livro1">Devolver Livro</button>
+                            <div class="modal fade" id="devolver-livro1" tabindex="-1" aria-labelledby="label-devolver-livro1" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -111,6 +138,30 @@
                                             <form action="#">
                                                 <button type="button" class="btn btn-danger my-2">Sim. Desejo devolver o livro</button>
                                                 <button type="button" class="btn btn-outline-dark my-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="mx-3 btn btn-info" data-toggle="modal" data-target="#informacoes-livro1">Ver Informações</button>
+                            <div class="modal fade" id="informacoes-livro1" tabindex="-1" aria-labelledby="label-informacoes-livro1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center">Informações do Livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body my-2">
+                                            <form action="#">
+                                                <div><img src="img/capas/capa_hobbit.jpeg" alt="Capa do Livro" class="mb-3" style="width: 100px;"></div>
+                                                <small class="text-muted">O Hobbit<br></small>
+                                                <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54<br></small>
+                                                <small class="text-muted">Empréstimo feito dia 01/03/2026 às 19:38 ao aluno(a) <a href="#">Gustavo Tamanini</a>.</small>
+                                                <small class="text-muted">Status: <span class="text-warning">Emprestado.</span><br></small>
+                                                <small class="text-muted">Devolução prevista para no máximo às 23:59 do dia 15/03/2026.<br></small>
+                                                <small class="text-muted">Multa acumulada: <span class="text-danger">R$0,00</span></small>
                                             </form>
                                         </div>
                                     </div>
@@ -129,8 +180,8 @@
                             <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-warning text-dark rounded">Emprestado até dia 21/03</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="submit" class="mx-3 btn btn-success mt-2" data-toggle="modal" data-target="#renovar-livro">Renovar Livro</button>
-                            <div class="modal fade" id="renovar-livro" tabindex="-1" aria-labelledby="label-renovar-livro" aria-hidden="true">
+                            <button type="submit" class="mx-3 btn btn-success" data-toggle="modal" data-target="#renovar-livro2">Renovar Livro</button>
+                            <div class="modal fade" id="renovar-livro2" tabindex="-1" aria-labelledby="label-renovar-livro2" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -148,8 +199,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger mb-2" data-toggle="modal" data-target="#devolver-livro">Devolver Livro</button>
-                            <div class="modal fade" id="devolver-livro" tabindex="-1" aria-labelledby="label-devolver-livro" aria-hidden="true">
+                            <button type="submit" class="mx-3 btn btn-danger mt-2 mb-2" data-toggle="modal" data-target="#devolver-livro2">Devolver Livro</button>
+                            <div class="modal fade" id="devolver-livro2" tabindex="-1" aria-labelledby="label-devolver-livro2" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -162,6 +213,30 @@
                                             <form action="#">
                                                 <button type="button" class="btn btn-danger my-2">Sim. Desejo devolver o livro</button>
                                                 <button type="button" class="btn btn-outline-dark my-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="mx-3 btn btn-info" data-toggle="modal" data-target="#informacoes-livro2">Ver Informações</button>
+                            <div class="modal fade" id="informacoes-livro2" tabindex="-1" aria-labelledby="label-informacoes-livro2" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center">Informações do Livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body my-2">
+                                            <form action="#">
+                                                <div><img src="img/capas/capa_ortodoxia.jpg" alt="Capa do Livro" class="mb-3" style="width: 100px;"></div>
+                                                <small class="text-muted">Ortodoxia<br></small>
+                                                <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15<br></small>
+                                                <small class="text-muted">Empréstimo feito dia 07/03/2026 às 19:38 ao aluno(a) <a href="#">Gustavo Lidievich</a>.</small>
+                                                <small class="text-muted">Status: <span class="text-warning">Emprestado.</span><br></small>
+                                                <small class="text-muted">Devolução prevista para no máximo às 23:59 do dia 21/03/2026.<br></small>
+                                                <small class="text-muted">Ainda é possível renová-lo duas vezes.</small>
                                             </form>
                                         </div>
                                     </div>

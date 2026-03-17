@@ -30,6 +30,10 @@ html, body{
     background-color: rgba(132, 138, 95);
 }
 
+.dropdown-toggle::before{
+    display: none !important;
+}
+
 .content{
     background-color: rgba(206, 216, 152);
     margin-top: 120px;
