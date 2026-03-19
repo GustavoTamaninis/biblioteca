@@ -6,6 +6,7 @@
     <title>Biblioteca</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="row m-0 p-0 d-flex flex-column min-vh-100">
@@ -64,9 +65,9 @@
                     </div>
                 </span>
             </header>
-            <main class="col-md-12 mt-5 mb-4">
+            <main class="col-md-12 mt-5 mb-4 animated slideInDown">
                 <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
-                    <h2 class="titulo-pesquisa font-weight-bold">Consulta aos Alunos</h2>
+                    <h2 class="titulo-pesquisa font-weight-bold">Consulta ao Acervo</h2>
                     <p class="mb-4">Procure por título, autor, gênero ou assunto:</p>
                     <input type="text" class="form-control" id="pesquisa" placeholder="Pesquise...">
                 </section>
@@ -124,6 +125,7 @@
                         <div class="col-md-6">
                             <h5>O Hobbit</h5>
                             <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54</small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
                             <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
@@ -193,6 +195,7 @@
                         <div class="col-md-6">
                             <h5>Ortodoxia</h5>
                             <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15</small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
                             <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
@@ -262,6 +265,7 @@
                         <div class="col-md-6">
                             <h5>Filoteia ou Introdução à Vida Devota</h5>
                             <small class="text-muted">Sales, São Francisco De. Pos. L2-91</small>
+                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-success text-light rounded">Disponível</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
                             <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
@@ -328,7 +332,7 @@
             </main>
         </div>
     </div>
-    <footer class="col-md-12 bg-dark text-light d-flex justify-content-center align-items-center">
+    <footer class="col-md-12 p-3 bg-dark text-light d-flex justify-content-center align-items-center">
         Site feito por Gustavo Tamanini
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
