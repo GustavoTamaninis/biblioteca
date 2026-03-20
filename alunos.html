@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,7 @@
 <body class="row m-0 p-0 d-flex flex-column min-vh-100">
     <nav class="col-md-3 navbar navbar-expand-md navbar-light text-center">
         <a class="navbar-brand" href="#"><h1>Biblioteca</h1></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,7 +27,7 @@
                     <a class="nav-link" href="emprestimos.html"><i class="fa-solid fa-scroll" style="color: rgb(0, 0, 0);"></i> Empréstimos</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 0, 0);"></i> Alunos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 0, 0);"></i> Alunos</a>
                 </li>
             </ul>
         </div>
@@ -35,9 +35,9 @@
     <div class="content col-md-9 flex-fill">
         <div class="row">
             <header class="col-md-12 text-right d-flex flex-row justify-content-end shadow-sm">
-                <a href="#" class="py-3 px-2"><i class="icone fa-regular fa-moon mt-2 mr-2" style="color: rgb(0, 0, 0);"></i></a>
-                <span class="dropleft d-flex align-items-center">
-                    <a href="#" class="dropdown-toggle py-3 px-2" data-toggle="dropdown" aria-expanded="false"><i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i></a>
+                <a href="#" class="py-3 px-2"><i class="icone fa-regular fa-moon mt-2 me-2" style="color: rgb(0, 0, 0);"></i></a>
+                <span class="dropstart d-flex align-items-center">
+                    <a href="#" class="dropdown-toggle py-3 px-2" data-bs-toggle="dropdown" aria-expanded="false"><i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i></a>
                     <div class="dropdown-menu p-2">
                         <div class="row">
                             <div class="col-md-3 offset-1 d-flex justify-content-center align-items-center">
@@ -65,9 +65,9 @@
                     </div>
                 </span>
             </header>
-            <main class="col-md-12 mt-5 mb-4 animated slideInDown">
+            <main class="col-md-12 mt-5 mb-4">
                 <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
-                    <h2 class="titulo-pesquisa font-weight-bold">Consulta a Alunos</h2>
+                    <h2 class="titulo-pesquisa fw-bold">Consulta a Alunos</h2>
                     <p class="mb-4">Procure por nome ou turma:</p>
                     <input type="text" class="form-control" id="pesquisa" placeholder="Pesquise...">
                 </section>
@@ -76,42 +76,40 @@
                     <button type="submit" class="mx-2 btn btn-dark">Pesquisar</button>
                 </section>
                 <section class="col-md-12 my-4 text-center">
-                    <button type="button" class="mx-2 btn btn-success" data-toggle="modal" data-target="#adicionar-livro">Cadastrar Aluno</button>
+                    <button type="button" class="mx-2 btn btn-success" data-bs-toggle="modal" data-bs-target="#adicionar-livro">Cadastrar Aluno</button>
                     <div class="modal fade" id="adicionar-livro" tabindex="-1" aria-labelledby="label-adicionar-livro" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                 <h5 class="modal-title">Cadastre um Aluno</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form action="#">
-                                        <div class="form-group">
+                                        <div class="mb-3">
                                             <label for="nome_aluno">Nome do aluno:</label>
                                             <input type="text" id="nome_aluno" class="form-control" placeholder="Digite o nome do aluno">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="mb-3">
                                             <label for="turma">Turma:</label>
-                                            <select name="turma" id="turma" class="custom-select">
+                                            <select name="turma" id="turma" class="form-select">
                                                 <option value="null" class="selected">Selecione</option>
                                                 <option value="2025_1">GR SADP 2025/1 N1</option>
                                                 <option value="2025_2">GR SADP 2025/2 N1</option>
                                                 <option value="2025_3">GR SADP 2026/1 N1</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="mb-3">
                                             <label for="cpf_aluno">CPF do aluno:</label>
                                             <input type="text" id="cpf_aluno" class="form-control" placeholder="Digite o CPF do aluno">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="mb-3">
                                             <label for="senha_aluno">Senha do aluno:</label>
                                             <input type="password" id="senha_aluno" class="form-control" placeholder="Digite a senha do aluno">
                                         </div>
-                                        <div class="form-group custom-file">
-                                            <label for="capa" class="custom-file-label d-flex justify-content-start text-muted">Envie uma foto do aluno</label>
-                                            <input type="file" id="capa" class="custom-file-input">
+                                        <div class="mb-3">
+                                            <label for="capa" class="form-label d-flex justify-content-start text-muted">Envie uma foto do aluno</label>
+                                            <input type="file" id="capa" class="form-control">
                                         </div>
                                         <button type="button" class="btn btn-primary my-2">Cadastrar Aluno</button>
                                     </form>
@@ -131,38 +129,36 @@
                             <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Multa Pendente: R$3,00</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
-                            <div class="modal fade" id="editar-livro" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-aluno1">Editar</button>
+                            <div class="modal fade" id="editar-aluno1" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                         <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form action="#">
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="titulo">Título do Livro:</label>
                                                     <input type="text" id="titulo" class="form-control" placeholder="Digite o título do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Nome do autor:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o nome do autor">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Gênero do livro:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o gênero do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="assuntos">Assuntos do livro:</label>
                                                     <input type="text" id="assuntos" class="form-control" placeholder="Digite os assuntos do livro">
                                                     <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
                                                 </div>
-                                                <div class="form-group custom-file">
-                                                    <label for="capa" class="custom-file-label">Envie a capa do livro</label>
-                                                    <input type="file" id="capa" class="custom-file-input">
+                                                <div class="mb-3">
+                                                    <label for="capa" class="form-label">Envie a capa do livro</label>
+                                                    <input type="file" id="capa" class="form-control">
                                                 </div>
                                                 <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
                                             </form>
@@ -170,20 +166,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-toggle="modal" data-target="#excluir-livro">Excluir</button>
+                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro">Excluir</button>
                             <div class="modal fade" id="excluir-livro" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form action="#">
                                                 <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                                             </form>
                                         </div>
                                     </div>
@@ -201,38 +195,36 @@
                             <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-light rounded">Multa Pendente: R$0,00</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
-                            <div class="modal fade" id="editar-livro" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-aluno2">Editar</button>
+                            <div class="modal fade" id="editar-aluno2" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                         <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form action="#">
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="titulo">Título do Livro:</label>
                                                     <input type="text" id="titulo" class="form-control" placeholder="Digite o título do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Nome do autor:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o nome do autor">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Gênero do livro:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o gênero do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="assuntos">Assuntos do livro:</label>
                                                     <input type="text" id="assuntos" class="form-control" placeholder="Digite os assuntos do livro">
                                                     <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
                                                 </div>
-                                                <div class="form-group custom-file">
-                                                    <label for="capa" class="custom-file-label">Envie a capa do livro</label>
-                                                    <input type="file" id="capa" class="custom-file-input">
+                                                <div class="mb-3">
+                                                    <label for="capa" class="form-label">Envie a capa do livro</label>
+                                                    <input type="file" id="capa" class="form-control">
                                                 </div>
                                                 <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
                                             </form>
@@ -240,25 +232,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-toggle="modal" data-target="#excluir-livro">Excluir</button>
-                            <div class="modal fade" id="excluir-livro" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro">Excluir</button>
                         </div>
                     </div>
                     <div class="row m-3 bg-light p-3">
@@ -271,38 +245,36 @@
                             <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Multa Pendente: R$1,50</p></div>
                         </div>
                         <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-toggle="modal" data-target="#editar-livro">Editar</button>
-                            <div class="modal fade" id="editar-livro" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-aluno3">Editar</button>
+                            <div class="modal fade" id="editar-aluno3" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                         <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form action="#">
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="titulo">Título do Livro:</label>
                                                     <input type="text" id="titulo" class="form-control" placeholder="Digite o título do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Nome do autor:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o nome do autor">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="autor">Gênero do livro:</label>
                                                     <input type="text" id="autor" class="form-control" placeholder="Digite o gênero do livro">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="mb-3">
                                                     <label for="assuntos">Assuntos do livro:</label>
                                                     <input type="text" id="assuntos" class="form-control" placeholder="Digite os assuntos do livro">
                                                     <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
                                                 </div>
-                                                <div class="form-group custom-file">
-                                                    <label for="capa" class="custom-file-label">Envie a capa do livro</label>
-                                                    <input type="file" id="capa" class="custom-file-input">
+                                                <div class="mb-3">
+                                                    <label for="capa" class="form-label">Envie a capa do livro</label>
+                                                    <input type="file" id="capa" class="form-control">
                                                 </div>
                                                 <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
                                             </form>
@@ -310,25 +282,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-toggle="modal" data-target="#excluir-livro">Excluir</button>
-                            <div class="modal fade" id="excluir-livro" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro">Excluir</button>
                         </div>
                     </div>
                 </section>
@@ -338,13 +292,6 @@
     <footer class="col-md-12 p-3 bg-dark text-light d-flex justify-content-center align-items-center">
         Site feito por Gustavo Tamanini
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script>
-        $(".custom-file-input").on("change", function() {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
