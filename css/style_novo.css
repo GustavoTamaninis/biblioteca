@@ -19,12 +19,6 @@ header{
 
 .navbar{
     background-color: rgba(163, 171, 120) !important;
-    /*position: fixed !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 1000; */
 }
 
 .sidebar{
@@ -36,11 +30,8 @@ header{
 }
 
 .nav-link{
-    /* width: 420px;
-    border-radius: 6px;
+    border-radius: 7px;
     padding: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px; */
 }
 
 .nav-link:hover{
