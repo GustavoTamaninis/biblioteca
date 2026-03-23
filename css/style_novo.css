@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+:root{
+    --color-header: #c29b87;
+    --color-content: #f6f2ea;
+    --color-primary: #1e423f;
+    --color-secondary: #34000b;
+    --color-secondary-soft: #532c2e;
+    --color-terciary: #a97954;
+}
+
+html, body{
+    min-height: 100vh !important;
+}
+
+header{
+    background-color: var(--color-primaria) !important;
+}
+
+.navbar{
+    background-color: rgba(163, 171, 120) !important;
+    /*position: fixed !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000; */
+}
+
+.sidebar{
+    min-height: 20px;
+}
+
+.navbar-toggler{
+    margin-bottom: 7px;
+}
+
+.nav-link{
+    /* width: 420px;
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px; */
+}
+
+.nav-link:hover{
+    background-color: rgba(132, 138, 95);
+}
+
+.dropdown-toggle::before{
+    display: none !important;
+}
+
+.content{
+    background-color: (--color-content);
+}
+
+footer{
+    z-index: 1200;
+    height: 50px;
+}
+.icone{
+    font-size: 1.8em;
+}
+
+@media screen and (min-width: 768px){
+    /* .navbar{
+        height: 100% !important;
+        flex-direction: column !important;
+    }
+    #navbarNav{
+        display: flex;
+        align-items: start;
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
+    .nav-link{
+        width: 190px;
+        padding: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .content{
+        margin-left: 25%;
+        margin-top: 0px;
+    }
+    .titulo-pesquisa{
+        font-size: 3em;
+    } */
+}
+
+@media screen and (min-width: 992px){
+    /* .content{
+
+    } */
+    /* .nav-link{
+        width: 247px;
+    } */
+}
+
+@media screen and (min-width: 1200px){
+    /* .nav-link{
+        width: 300px;
+    } */
+}
