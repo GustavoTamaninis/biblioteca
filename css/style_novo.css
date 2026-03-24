@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root{
     --color-primary: #011C40;
@@ -9,13 +10,10 @@
     --color-terciary: #8C7954;
 }
 
-.btn-primary{
-    background-color: var(--color-primary);
-}
-
 html, body{
     min-height: 100vh !important;
     background-color: var(--color-primary-soft);
+    font-family: "Gentium Book Plus", serif;
 }
 
 header{
@@ -46,6 +44,10 @@ header{
 
 .dropdown-toggle::after{
     display: none !important;
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
 }
 
 .content{
