@@ -7,43 +7,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style_novo.css">
 </head>
-<body class="row m-0 p-0 d-flex flex-column min-vh-100">
-    <nav class="col-md-3 navbar navbar-expand-md navbar-light text-center">
-        <a class="navbar-brand" href="#"><h1>Biblioteca</h1></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav d-flex flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i> Início</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-book-bookmark" style="color: rgb(0, 0, 0);"></i> Acervo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="emprestimos.html"><i class="fa-solid fa-scroll" style="color: rgb(0, 0, 0);"></i> Empréstimos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="alunos.html"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 0, 0);"></i> Alunos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="content col-md-9 flex-fill">
-        <div class="row">
-            <header class="col-md-12 text-end d-flex flex-row justify-content-end shadow-sm">
-                <a href="#" class="py-3 px-2"><i class="icone fa-regular fa-moon mt-2 me-2" style="color: rgb(0, 0, 0);"></i></a>
-                <span class="dropstart d-flex align-items-center">
-                    <a href="#" class="dropdown-toggle py-3 px-2" data-bs-toggle="dropdown" aria-expanded="false"><i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i></a>
+<body class="d-flex flex-column min-vh-100">
+    <header class="text-right shadow-sm">
+        <div class="row g-0">
+            <div class="col-2 d-flex align-items-center justify-content-start">
+                <a class="rounded border-none ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="./img/icones/lista.svg" alt="ícone de menu" class="" style="width: 35px;"></a>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <a type="button" class="text-reset rounded border-0" data-bs-dismiss="offcanvas" aria-label="Close"><img src="./img/icones/lista_branca.svg" alt="ícone de menu" class="text-white" style="width: 35px;"></a>
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Biblioteca</h5>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav d-flex flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link ps-3" href="index.html"><i class="fa-solid fa-house" style="color: rgb(255, 255, 255);"></i> Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-3" href="acervo.html"><i class="fa-solid fa-book-bookmark" style="color: rgb(255, 255, 255);"></i> Acervo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-3" href="emprestimos.html"><i class="fa-solid fa-scroll" style="color: rgb(255, 255, 255);"></i> Empréstimos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-3" href="alunos.html"><i class="fa-solid fa-graduation-cap" style="color: rgb(255, 255, 255);"></i> Alunos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 offset-6 d-flex justify-content-end">
+                <a href="#" class="py-3 px-2"><i class="icone fa-regular fa-moon mt-1 mr-2" style="color: rgb(0, 0, 0); width: 35px;"></i></a>
+                <span class="dropleft d-flex align-items-center">
+                    <a href="#" class="dropdown-toggle py-3 px-2 me-2" data-bs-toggle="dropdown" aria-expanded="false"><i class="icone fa-solid fa-circle-user mt-1" style="color: rgb(0, 0, 0); width: 35px;"></i></a>
                     <div class="dropdown-menu p-2">
                         <div class="row">
                             <div class="col-md-3 offset-1 d-flex justify-content-center align-items-center">
                                 <i class="icone fa-solid fa-circle-user mt-2" style="color: rgb(0, 0, 0);"></i>
                             </div>
-                            <div class="col-md-8 d-flex flex-column justify-content-center p-0">
+                            <div class="col-md-3 d-flex flex-column justify-content-center p-0">
                                 <p class="mb-0">Admin</p>
                                 <small class="text-muted">GustavoTama</small>
                             </div>
@@ -64,258 +68,260 @@
                         </div>
                     </div>
                 </span>
-            </header>
-            <main class="col-md-12 mt-5 mb-4">
-                <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
-                    <h2 class="titulo-pesquisa fw-bold">Consulta ao Acervo</h2>
-                    <p class="mb-4">Procure por título, autor, gênero ou assunto:</p>
-                    <input type="text" class="form-control" id="pesquisa" placeholder="Pesquise...">
-                </section>
-                <section class="col-md-12 my-4 text-center">
-                    <button type="button" class="mx-2 btn btn-outline-dark">Filtrar por</button>
-                    <button type="submit" class="mx-2 btn btn-dark">Pesquisar</button>
-                </section>
-                <section class="col-md-12 my-4 text-center">
-                    <button type="button" class="mx-2 btn btn-success" data-bs-toggle="modal" data-bs-target="#adicionar-livro">Adicionar Livro</button>
-                    <div class="modal fade" id="adicionar-livro" tabindex="-1" aria-labelledby="label-adicionar-livro" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title">Adicione um Livro</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="#">
-                                        <div class="mb-2 text-start">
-                                            <label for="titulo" class="form-label">Título do Livro:</label>
-                                            <input type="text" id="titulo" class="form-control" placeholder="Digite o título do livro">
-                                        </div>
-                                        <div class="mb-2 text-start">
-                                            <label for="autor" class="form-label">Nome do autor:</label>
-                                            <input type="text" id="autor" class="form-control" placeholder="Digite o nome do autor">
-                                        </div>
-                                        <div class="mb-2 text-start">
-                                            <label for="genero" class="form-label">Gênero do livro:</label>
-                                            <input type="text" id="genero" class="form-control" placeholder="Digite o gênero do livro">
-                                        </div>
-                                        <div class="mb-2 text-start">
-                                            <label for="assuntos" class="form-label">Assuntos do livro:</label>
-                                            <input type="text" id="assuntos" class="form-control" placeholder="Digite os assuntos do livro">
-                                            <div class="form-text">Use vírgulas para separar os assuntos</div>
-                                        </div>
-                                        <div class="mb-3 text-start">
-                                            <label for="capa" class="form-label">Envie a capa do livro</label>
-                                            <input type="file" id="capa" class="form-control">
-                                        </div>
-                                        <button type="button" class="btn btn-primary">Adicionar Livro</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="col-md-12 my-4 text-center">
-                    <div class="row m-3 bg-light p-3">
-                        <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="img/capas/capa_hobbit.jpeg" alt="Capa de O Hobbit" style="width: 60px;">
-                        </div>
-                        <div class="col-md-6">
-                            <h5>O Hobbit</h5>
-                            <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54</small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
-                        </div>
-                        <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-1">Editar</button>
-                            <div class="modal fade" id="editar-livro-1" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <div class="mb-3">
-                                                    <label for="titulo1" class="form-label text-start d-block">Título do Livro:</label>
-                                                    <input type="text" id="titulo1" class="form-control" placeholder="Digite o título do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="autor1" class="form-label text-start d-block">Nome do autor:</label>
-                                                    <input type="text" id="autor1" class="form-control" placeholder="Digite o nome do autor">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="genero1" class="form-label text-start d-block">Gênero do livro:</label>
-                                                    <input type="text" id="genero1" class="form-control" placeholder="Digite o gênero do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="assuntos1" class="form-label text-start d-block">Assuntos do livro:</label>
-                                                    <input type="text" id="assuntos1" class="form-control" placeholder="Digite os assuntos do livro">
-                                                    <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="capa1" class="form-label text-start d-block">Envie a capa do livro</label>
-                                                    <input type="file" id="capa1" class="form-control">
-                                                </div>
-                                                <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-1">Excluir</button>
-                            <div class="modal fade" id="excluir-livro-1" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-3 bg-light p-3">
-                        <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="img/capas/capa_ortodoxia.jpg" alt="Capa de O Hobbit" style="width: 60px;">
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Ortodoxia</h5>
-                            <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15</small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
-                        </div>
-                        <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-2">Editar</button>
-                            <div class="modal fade" id="editar-livro-2" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <div class="mb-3">
-                                                    <label for="titulo2" class="form-label text-start d-block">Título do Livro:</label>
-                                                    <input type="text" id="titulo2" class="form-control" placeholder="Digite o título do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="autor2" class="form-label text-start d-block">Nome do autor:</label>
-                                                    <input type="text" id="autor2" class="form-control" placeholder="Digite o nome do autor">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="genero2" class="form-label text-start d-block">Gênero do livro:</label>
-                                                    <input type="text" id="genero2" class="form-control" placeholder="Digite o gênero do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="assuntos2" class="form-label text-start d-block">Assuntos do livro:</label>
-                                                    <input type="text" id="assuntos2" class="form-control" placeholder="Digite os assuntos do livro">
-                                                    <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="capa2" class="form-label text-start d-block">Envie a capa do livro</label>
-                                                    <input type="file" id="capa2" class="form-control">
-                                                </div>
-                                                <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-2">Excluir</button>
-                            <div class="modal fade" id="excluir-livro-2" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-3 bg-light p-3">
-                        <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="img/capas/capa_filoteia.jpg" alt="Capa de O Hobbit" style="width: 60px;">
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Filoteia ou Introdução à Vida Devota</h5>
-                            <small class="text-muted">Sales, São Francisco De. Pos. L2-91</small>
-                            <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-success text-light rounded">Disponível</p></div>
-                        </div>
-                        <div class="col-md-3 d-flex flex-column justify-content-between">
-                            <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-3">Editar</button>
-                            <div class="modal fade" id="editar-livro-3" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title">Edite o livro</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <div class="mb-3">
-                                                    <label for="titulo3" class="form-label text-start d-block">Título do Livro:</label>
-                                                    <input type="text" id="titulo3" class="form-control" placeholder="Digite o título do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="autor3" class="form-label text-start d-block">Nome do autor:</label>
-                                                    <input type="text" id="autor3" class="form-control" placeholder="Digite o nome do autor">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="genero3" class="form-label text-start d-block">Gênero do livro:</label>
-                                                    <input type="text" id="genero3" class="form-control" placeholder="Digite o gênero do livro">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="assuntos3" class="form-label text-start d-block">Assuntos do livro:</label>
-                                                    <input type="text" id="assuntos3" class="form-control" placeholder="Digite os assuntos do livro">
-                                                    <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="capa3" class="form-label text-start d-block">Envie a capa do livro</label>
-                                                    <input type="file" id="capa3" class="form-control">
-                                                </div>
-                                                <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-3">Excluir</button>
-                            <div class="modal fade" id="excluir-livro-3" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="#">
-                                                <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
-                                                <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
+            </div>
         </div>
+    </header>
+    <div class="content flex-fill">
+        <main class="col-md-12 mt-5 mb-4">
+            <section class="d-flex flex-column align-items-center justify-content-center mx-5 p-0">
+                <h2 class="titulo-pesquisa">Consulta ao Acervo</h2>
+                <p class="mb-4">Procure por título, autor, gênero ou assunto:</p>
+                <input type="text" class="form-control" id="pesquisa" placeholder="Pesquise...">
+            </section>
+            <section class="col-md-12 my-4 text-center">
+                <button type="button" class="mx-2 btn btn-outline-dark">Filtrar por</button>
+                <button type="submit" class="mx-2 btn btn-dark">Pesquisar</button>
+            </section>
+            <section class="col-md-12 my-4 text-center">
+                <button type="button" class="mx-2 btn btn-success" data-bs-toggle="modal" data-bs-target="#adicionar-livro">Adicionar Livro</button>
+                <div class="modal fade" id="adicionar-livro" tabindex="-1" aria-labelledby="label-adicionar-livro" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Adicione um Livro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mb-2 text-start">
+                                        <label for="titulo" class="form-label">Título do Livro:</label>
+                                        <input type="text" id="titulo" class="form-control" placeholder="Digite o título do livro">
+                                    </div>
+                                    <div class="mb-2 text-start">
+                                        <label for="autor" class="form-label">Nome do autor:</label>
+                                        <input type="text" id="autor" class="form-control" placeholder="Digite o nome do autor">
+                                    </div>
+                                    <div class="mb-2 text-start">
+                                        <label for="genero" class="form-label">Gênero do livro:</label>
+                                        <input type="text" id="genero" class="form-control" placeholder="Digite o gênero do livro">
+                                    </div>
+                                    <div class="mb-2 text-start">
+                                        <label for="assuntos" class="form-label">Assuntos do livro:</label>
+                                        <input type="text" id="assuntos" class="form-control" placeholder="Digite os assuntos do livro">
+                                        <div class="form-text">Use vírgulas para separar os assuntos</div>
+                                    </div>
+                                    <div class="mb-3 text-start">
+                                        <label for="capa" class="form-label">Envie a capa do livro</label>
+                                        <input type="file" id="capa" class="form-control">
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Adicionar Livro</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-12 my-4 text-center">
+                <div class="row m-3 item-light p-3">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <img src="img/capas/capa_hobbit.jpeg" alt="Capa de O Hobbit" style="width: 60px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>O Hobbit</h5>
+                        <small class="text-muted">Tolkien, J. R. R. (John Ronald Reuel). Pos. G3-54</small>
+                        <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column justify-content-between">
+                        <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-1">Editar</button>
+                        <div class="modal fade" id="editar-livro-1" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title">Edite o livro</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <div class="mb-3">
+                                                <label for="titulo1" class="form-label text-start d-block">Título do Livro:</label>
+                                                <input type="text" id="titulo1" class="form-control" placeholder="Digite o título do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="autor1" class="form-label text-start d-block">Nome do autor:</label>
+                                                <input type="text" id="autor1" class="form-control" placeholder="Digite o nome do autor">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="genero1" class="form-label text-start d-block">Gênero do livro:</label>
+                                                <input type="text" id="genero1" class="form-control" placeholder="Digite o gênero do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="assuntos1" class="form-label text-start d-block">Assuntos do livro:</label>
+                                                <input type="text" id="assuntos1" class="form-control" placeholder="Digite os assuntos do livro">
+                                                <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="capa1" class="form-label text-start d-block">Envie a capa do livro</label>
+                                                <input type="file" id="capa1" class="form-control">
+                                            </div>
+                                            <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-1">Excluir</button>
+                        <div class="modal fade" id="excluir-livro-1" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
+                                            <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3 item-light p-3">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <img src="img/capas/capa_ortodoxia.jpg" alt="Capa de O Hobbit" style="width: 60px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Ortodoxia</h5>
+                        <small class="text-muted">Chesterton, G. K. (Gilbert Keith). Pos. M2-15</small>
+                        <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-danger text-light rounded">Emprestado</p></div>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column justify-content-between">
+                        <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-2">Editar</button>
+                        <div class="modal fade" id="editar-livro-2" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title">Edite o livro</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <div class="mb-3">
+                                                <label for="titulo2" class="form-label text-start d-block">Título do Livro:</label>
+                                                <input type="text" id="titulo2" class="form-control" placeholder="Digite o título do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="autor2" class="form-label text-start d-block">Nome do autor:</label>
+                                                <input type="text" id="autor2" class="form-control" placeholder="Digite o nome do autor">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="genero2" class="form-label text-start d-block">Gênero do livro:</label>
+                                                <input type="text" id="genero2" class="form-control" placeholder="Digite o gênero do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="assuntos2" class="form-label text-start d-block">Assuntos do livro:</label>
+                                                <input type="text" id="assuntos2" class="form-control" placeholder="Digite os assuntos do livro">
+                                                <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="capa2" class="form-label text-start d-block">Envie a capa do livro</label>
+                                                <input type="file" id="capa2" class="form-control">
+                                            </div>
+                                            <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-2">Excluir</button>
+                        <div class="modal fade" id="excluir-livro-2" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
+                                            <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3 item-light p-3">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <img src="img/capas/capa_filoteia.jpg" alt="Capa de O Hobbit" style="width: 60px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Filoteia ou Introdução à Vida Devota</h5>
+                        <small class="text-muted">Sales, São Francisco De. Pos. L2-91</small>
+                        <div class="d-flex justify-content-center mt-2"><p class="w-50 bg-success text-light rounded">Disponível</p></div>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column justify-content-between">
+                        <button type="button" class="mx-3 btn btn-warning mt-2 mb-2"  data-bs-toggle="modal" data-bs-target="#editar-livro-3">Editar</button>
+                        <div class="modal fade" id="editar-livro-3" tabindex="-1" aria-labelledby="label-editar-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title">Edite o livro</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <div class="mb-3">
+                                                <label for="titulo3" class="form-label text-start d-block">Título do Livro:</label>
+                                                <input type="text" id="titulo3" class="form-control" placeholder="Digite o título do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="autor3" class="form-label text-start d-block">Nome do autor:</label>
+                                                <input type="text" id="autor3" class="form-control" placeholder="Digite o nome do autor">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="genero3" class="form-label text-start d-block">Gênero do livro:</label>
+                                                <input type="text" id="genero3" class="form-control" placeholder="Digite o gênero do livro">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="assuntos3" class="form-label text-start d-block">Assuntos do livro:</label>
+                                                <input type="text" id="assuntos3" class="form-control" placeholder="Digite os assuntos do livro">
+                                                <small class="form-text text-muted">Use vírgulas para separar os assuntos</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="capa3" class="form-label text-start d-block">Envie a capa do livro</label>
+                                                <input type="file" id="capa3" class="form-control">
+                                            </div>
+                                            <button type="button" class="btn btn-primary my-2">Adicionar Livro</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="mx-3 btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-livro-3">Excluir</button>
+                        <div class="modal fade" id="excluir-livro-3" tabindex="-1" aria-labelledby="label-excluir-livro" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Tem certeza de que deseja excluir o livro?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="#">
+                                            <button type="button" class="btn btn-danger my-2">Sim. Desejo excluir o livro</button>
+                                            <button type="button" class="btn btn-outline-dark my-2" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
     <footer class="col-md-12 p-3 bg-dark text-light d-flex justify-content-center align-items-center">
         Site feito por Gustavo Tamanini
